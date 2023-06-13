@@ -213,7 +213,7 @@ bool CGMan::TakeDamage(entvars_t* pevInflictor, entvars_t* pevAttacker, float fl
 {
 	pev->health = pev->max_health / 2; // always trigger the 50% damage aitrigger
 
-	if (flDamage > 1)
+	if (flDamage > 0)
 	{
 		SetConditions(bits_COND_LIGHT_DAMAGE);
 	}

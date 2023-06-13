@@ -1410,7 +1410,7 @@ void CTalkMonster::FollowerUse(CBaseEntity* pActivator, CBaseEntity* pCaller, US
 			LimitFollowers(pCaller, 1);
 
 			if ((m_afMemory & bits_MEMORY_PROVOKED) != 0)
-				ALERT(at_console, "I don't follow niggers like you! \n");
+				ALERT(at_console, "I'm not following you, you evil person!\n");
 			else
 			{
 				StartFollowing(pCaller);

@@ -126,7 +126,7 @@ void CGMan::Spawn()
 	pev->solid = SOLID_SLIDEBOX;
 	pev->movetype = MOVETYPE_STEP;
 	m_bloodColor = DONT_BLEED;
-	pev->health = 2;
+	pev->health = 100;
 	m_flFieldOfView = 0.5; // indicates the width of this monster's forward view cone ( as a dotproduct result )
 	m_MonsterState = MONSTERSTATE_NONE;
 
@@ -213,7 +213,7 @@ bool CGMan::TakeDamage(entvars_t* pevInflictor, entvars_t* pevAttacker, float fl
 {
 	pev->health = pev->max_health / 2; // always trigger the 50% damage aitrigger
 
-	if (flDamage > 1)
+	if (flDamage > 0)
 	{
 		SetConditions(bits_COND_LIGHT_DAMAGE);
 	}

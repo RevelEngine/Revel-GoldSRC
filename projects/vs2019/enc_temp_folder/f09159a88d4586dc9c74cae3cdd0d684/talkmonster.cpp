@@ -1403,7 +1403,7 @@ void CTalkMonster::FollowerUse(CBaseEntity* pActivator, CBaseEntity* pCaller, US
 		// Pre-disaster followers can't be used
 		if ((pev->spawnflags & SF_MONSTER_PREDISASTER) != 0)
 		{
-			DeclineFollowing();
+			//DeclineFollowing();
 		}
 		else if (CanFollow())
 		{

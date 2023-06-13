@@ -1403,11 +1403,11 @@ void CTalkMonster::FollowerUse(CBaseEntity* pActivator, CBaseEntity* pCaller, US
 		// Pre-disaster followers can't be used
 		if ((pev->spawnflags & SF_MONSTER_PREDISASTER) != 0)
 		{
-			DeclineFollowing();
+			//DeclineFollowing();
 		}
 		else if (CanFollow())
 		{
-			LimitFollowers(pCaller, 1);
+			LimitFollowers(pCaller, 4);
 
 			if ((m_afMemory & bits_MEMORY_PROVOKED) != 0)
 				ALERT(at_console, "I don't follow niggers like you! \n");
