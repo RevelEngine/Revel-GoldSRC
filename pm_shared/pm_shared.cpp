@@ -2523,6 +2523,7 @@ void PM_NoClip()
 //  running PM_AirMove, which doesn't crop velocity to maxspeed like the ground / other
 //  movement logic does.
 //-----------------------------------------------------------------------------
+/*
 void PM_PreventMegaBunnyJumping()
 {
 	// Current player speed
@@ -2547,6 +2548,7 @@ void PM_PreventMegaBunnyJumping()
 
 	VectorScale(pmove->velocity, fraction, pmove->velocity); //Crop it down!.
 }
+/*
 
 /*
 =============
@@ -2629,14 +2631,17 @@ void PM_Jump()
 		pmove->oldbuttons |= IN_JUMP; // don't jump again until released
 		return;						  // in air, so no effect
 	}
-
+	/*
 	if ((pmove->oldbuttons & IN_JUMP) != 0)
-		return; // don't pogo stick
+		return; 
+	*/
+
+	// don't pogo stick
 
 	// In the air now.
 	pmove->onground = -1;
-
-	PM_PreventMegaBunnyJumping();
+	
+	//	PM_PreventMegaBunnyJumping(); 
 
 	if (tfc)
 	{

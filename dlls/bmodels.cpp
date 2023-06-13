@@ -69,6 +69,13 @@ void CFuncWall::Spawn()
 
 	// If it can't move/go away, it's really part of the world
 	pev->flags |= FL_WORLDBRUSH;
+	
+	//idk just makes a bright ass light
+	//pev->effects = EF_BRIGHTLIGHT;
+
+
+	/* test command lol
+	ALERT(at_console, "Hello world\n");*/
 }
 
 
